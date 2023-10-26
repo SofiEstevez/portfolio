@@ -23,7 +23,7 @@ const products = [
        tag3: '.Design',
        seeMore: 'https://github.com/chicasprogramandoarg', 
        image1: '/img/HOME.png',
-       image2: '/img/logo.png',
+       image2: '/img/view.png',
        image3: '/img/pins.png',
        image4: '/img/slice3.png',
        image5: '/img/buttons.png',
