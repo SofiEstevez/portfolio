@@ -288,7 +288,7 @@ h1::after {
 .about-text p {
   font-size: 2.5em;
   padding-left: 0.5rem;
-  font-family: 'Roboto';
+  font-family: 'Roboto', monospace;
   font-weight:normal; 
 }
 
@@ -405,7 +405,7 @@ h1::after {
    width: 100%;
    text-decoration: none;
    color: var(--black);
-   font-family: 'Roboto';
+   font-family: 'Roboto', monospace;
    font-weight: 400;
  }
  
