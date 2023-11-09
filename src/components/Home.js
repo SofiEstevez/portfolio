@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import products from './data.js';
 import gsap from 'gsap';
 import {useRef, useEffect} from 'react';
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+import Singleproduct from './singleproduct.js';
 gsap.registerPlugin(ScrollTrigger)
 let black = '#0A0A0A';
 let offWhite = '#EDEEE9';
@@ -126,16 +127,7 @@ const Home = () => {
         )}
       </div>
     </section>
-            <section className="contact" id="contact" ref={contact}>
-            <h2>CONTACT</h2>
-            <p>Say hi to</p>
-            <p className="email">mariasofiaestevez@gmail.com</p>
-        </section>
-        {/*
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-    <script src="gsap.js"></script> */}
+
     </body>
     </>
   )

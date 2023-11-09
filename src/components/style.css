@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lugrasimo&family=Roboto:ital,wght@1,300&display=swap');
 :root {
   --bg-color: #bc9fcf;
-  --secondary-color: #5F486F;
+  --secondary-color: #745887;
+  /*#5F486F; */
   --lines: #5D4F66;
   --black: #252329;
   --typewriterSpeed: 1s;
@@ -26,7 +27,7 @@ html{
   scroll-padding-top: 9vh;
 }
 
-.body-index {
+body {
   background-color: #bc9fcf;
   font-family: 'Roboto', sans-serif;
 }
@@ -446,36 +447,32 @@ h1::after {
  
 /*********************** project page styles */
 
-.body-project {
-    background-color: #5F486F;
-  }
-  
 .project-page{
     height: 100vh;
     display: grid;
     grid-template-columns: 80%;
-    grid-template-rows: 70% auto;
+    grid-template-rows: 80% 20%;
     justify-content: center;
 }
 
 .project-page-title{
-    background-color: #bc9fcf;
+    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
     align-items: end;
     font-size: 2em;
     padding-bottom: 1em;
+    text-align: center;
 }
 
 .project-page-title h2 {
-    font-size: 2.8em;
-    color: #5F486F;
+    font-size: 4em;
+    color: var(--bg-color);
   }
   .col1{
     font-size: 2em;
-    margin-top: 2em;
     text-align: center;
-    color: #bc9fcf; 
+    color: var(--secondary-color); 
     font-family: 'Roboto';
     font-weight: normal;   
   }
@@ -484,8 +481,22 @@ h1::after {
     display: grid;
     grid-template-columns: repeat(2, 50%);
     justify-content: center;
-    margin-bottom: 2em;
     height: 28vh;
+    width: 100%;
+  }
+
+  .project-images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-ultimafila{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2em;
   }
 
   .back-parent {
@@ -494,18 +505,18 @@ h1::after {
     left: 1.5em;
     z-index: 3;
     font-family: 'Roboto', sans-serif;
-    background-color: #5F486F;
-    color: #bc9fcf;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
     text-decoration: none;
   }
   
   .back-parent:hover {
-      background-color: #bc9fcf;
-      color: #5F486F;  
+      background-color: var(--secondary-color);
+      color: var(--bg-color);  
   }
 
   .back-parent:hover p  {
-  border-bottom: #5f486f solid 2px;
+  border-bottom: var(--bg-color) solid 2px;
   border-left: none;
   border-right: none;
 
@@ -516,15 +527,15 @@ margin: 0px;
   font-size: 1.5em;
   writing-mode: vertical-rl;
   text-orientation: upright;
-  border: #bc9fcf solid 2px;
+  border: var(--secondary-color) solid 2px;
   padding: 1em;
   font-weight: 600;
 }
 
 .svg-dad {
-  border-left: #bc9fcf solid 2px;
-  border-right: #bc9fcf solid 2px;
-  border-bottom: #bc9fcf solid 2px;
+  border-left: var(--secondary-color) solid 2px;
+  border-right: var(--secondary-color) solid 2px;
+  border-bottom: var(--secondary-color) solid 2px;
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -532,8 +543,8 @@ margin: 0px;
 }
 
   .tags {
-    color: #bc9fcf;
-    border: #bc9fcf solid 2px;
+    color: var(--secondary-color);
+    border: var(--secondary-color) solid 2px;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -545,13 +556,13 @@ margin: 0px;
   }
 
   .link {
-    border-top: #bc9fcf solid 2px;
-    border-bottom: #bc9fcf solid 2px;
-    border-right: #bc9fcf solid 2px;
+    border-top: var(--secondary-color) solid 2px;
+    border-bottom: var(--secondary-color) solid 2px;
+    border-right: var(--secondary-color) solid 2px;
     display: flex;
     justify-content: end;
     align-items: end;
-    color: #bc9fcf;
+    color: var(--secondary-color);
     font-size: 1.6em;
     padding-bottom: 4px;
     padding-right: 5px;
@@ -560,34 +571,51 @@ margin: 0px;
   }
   
   .link:hover {
-    background-color: #bc9fcf;
-    color: #5F486F; 
+    background-color: var(--secondary-color);
+    color: var(--bg-color); 
   }
-  
-  .section-project{
-    display: grid;
-    grid-template-columns: repeat(2, 40%);
-    justify-content: center;
-    gap: 2em;
+
+  .project-images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .grid-item:nth-child(1) {
-    grid-column: 1/3;
-  }
-  
-  .grid-item:nth-child(4) {
-    grid-row: 3/5;
-  }
-  
+
   .img-project{
-    width: 100%;
+    width: 80%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+  }
+ 
+  .overview-project{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+  }
+
+  .overview-text{
+    width: 80%;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    border-top: solid 2px var(--secondary-color);
+    padding-top: 1em;
+    font: 2em;
   }
   
   .text {
     font-size: 1.7em;
-    color: #bc9fcf;
+    color: var(--secondary-color);
     font-family: 'Roboto';
     font-weight: 400;
+  }
+
+  .overview-titulo{
+    font-size: 2em;
+  }
+
+  .descripcion{
+    font-size: 1.6em;
   }
   
   .email{
@@ -640,4 +668,88 @@ margin: 0px;
     height: 10em;
     background-color: red;
     width: 10em;
+  }
+
+  @media only screen and (max-width: 425px){
+    body{
+      background-color: red;
+      width: 100%;
+    }
+    .body-index{
+      width: 100%;
+    }
+    .header{
+   
+    }
+    .firstpart{
+      display: block;
+    }
+    .css-typing{
+      font-size: 3em;
+    }
+    .desplazar{
+      height: 30%;
+      width: 90%;
+    }
+    .mywork-section{
+      top: 0;
+      display: grid;
+      grid-template-columns: 10% 90%;
+      height: 80%;
+      width: 100%;
+     }
+     
+     .work-column1{
+       display: flex;
+       justify-content: center;
+       border-right: 2px solid var(--bg-color);
+       align-items: center;
+     }
+     
+     .work-wrapper{
+       grid-column: auto;
+       display: grid;
+       grid-template-rows: 20% 20% 20% 20% 20%;
+     }
+     
+     .section-title{
+       font-size: 4.7em;
+       writing-mode: vertical-rl;
+       text-orientation: upright;
+       color: var(--bg-color);
+     }
+     
+     .project {
+       border-bottom: 2px solid var(--secondary-color);
+       display: flex;
+       justify-items: end;
+       align-items: center;
+       padding-left: 1em;
+     }
+     
+     .project:last-child {
+       border-bottom: none;
+     
+     }
+     
+     .project-title1{
+       display: flex;
+       align-items: center;
+     }
+     .contact{
+      height: 100%;
+      z-index: 0;
+      background-color: var(--secondary-color);
+     }
+     .nav{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom:  var(--bg-color) solid 2px;
+      background-color: var(--secondary-color);
+      font-family: 'Roboto', sans-serif;
+      height: 9vh;
+    }
+
   }
